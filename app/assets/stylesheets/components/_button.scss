@@ -1,0 +1,32 @@
+.button-frozen {
+  background-color: $frozen;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0,7 ease-in-out;
+   &:hover {
+    background-color: #7fc8f8;
+  }
+}
+
+.button-contour {
+  border: solid $frozen;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  text-decoration: none;
+  color : $frozen;
+  &:hover {
+    border:solid  #7fc8f8;
+    color: #7fc8f8
+  }
+}
+
+#btn-top {
+  font-size: 18px;
+
+}
