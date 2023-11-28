@@ -1,0 +1,20 @@
+.card {
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-right: 18px;
+  margin-bottom: 20px;
+  p {
+    font-size: 12px;
+  }
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+}
