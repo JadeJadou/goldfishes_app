@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Shark.destroy_all
+
+user = User.create!(first_name: "John", email: "john@email.com", password: "123456")
+Shark.create!(name: "Nemo", description: "Looking for his father", price_per_day: 100, owner_id: user.id)
+Shark.create(name: "Dory", description: "Swim right ahead", price_per_day: 80, owner_id: user.id)
+Shark.create(name: "Polochon", description: "Je m'emmèle les nageoires", price_per_day: 90, owner_id: user.id)
