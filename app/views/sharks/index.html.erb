@@ -1,2 +1,16 @@
-<h1>Sharks#index</h1>
-<p>Find me in app/views/sharks/index.html.erb</p>
+<h1>Nos poissons à louer</h1>
+<p>Faites votre choix parmi les propositions ci-dessous</p>
+
+
+<div class="d-flex p-2 card">
+  <% @sharks.each do | shark | %>
+    <ul>
+      <li><%= shark.name %></li>
+      <li><%= shark.description %></li>
+      <li><%= shark.price_per_day %></li>
+      <% shark.photos.each do |photo| %>
+        <li><%= cl_image_tag photo.key, width: 400, height: 300, crop: :fill %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
