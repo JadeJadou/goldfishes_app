@@ -1,15 +1,18 @@
 <h1>Nos poissons à louer</h1>
-<p>Faites votre choix parmi les propositions ci-dessous</p>
+<p>Faites votre choix parmi les propositions ci-dessous:</p>
 
-
-<div class="d-flex p-2 card">
+<div class="card-trip d-flex flex-column mb-3">
   <% @sharks.each do | shark | %>
     <ul>
-      <li><%= shark.name %></li>
-      <li><%= shark.description %></li>
-      <li><%= shark.price_per_day %></li>
+      <div class="card-simple p-4">
+        <div>
+        <li class="title-shark">Nom du poisson: <%= shark.name %></li>
+        <li>Description du poisson: <%= shark.description %></li>
+        </div>
+        <li> <p class="card-trip-pricing"><%= shark.price_per_day %>€ par jour</p></li>
       <% shark.photos.each do |photo| %>
         <li><%= cl_image_tag photo.key, width: 400, height: 300, crop: :fill %></li>
+        </div>
       <% end %>
     </ul>
   <% end %>
