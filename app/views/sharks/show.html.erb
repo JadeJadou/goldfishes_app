@@ -3,29 +3,41 @@
     <% if @shark.photos.attached? %>
     <%= cl_image_path(@shark.photos.key) %>
     <% else %>
-       <img src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
+       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
+       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
+       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
+
     <% end %>
 
 
   <p><%= @shark.description %></p>
-<div style = "display: flex; justify-content: flex-end">
-  <div class = "card-simple">
-    <%= @shark.price_per_day %> € par jour
+  <div class="form-container" style = "display: flex; justify-content: flex-end">
+    <div class="text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit turpis cursus in hac habitasse platea dictumst quisque. Facilisis sed odio morbi quis commodo. Rutrum quisque non tellus orci ac auctor. Fames ac turpis egestas sed tempus urna et pharetra pharetra. Facilisis magna etiam tempor orci. Lacus vel facilisis volutpat est velit. Amet est placerat in egestas erat imperdiet sed euismod. Accumsan in nisl nisi scelerisque. Ipsum a arcu cursus vitae. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Semper risus in hendrerit gravida rutrum. At tellus at urna condimentum mattis pellentesque id. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Cursus eget nunc scelerisque viverra mauris. Morbi tristique senectus et netus. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Et odio pellentesque diam volutpat commodo sed egestas egestas. Leo duis ut diam quam nulla porttitor.
 
-  <%= simple_form_for(@booking) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      Integer vitae justo eget magna fermentum iaculis eu. Diam ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Elementum curabitur vitae nunc sed. Senectus et netus et malesuada fames. Non diam phasellus vestibulum lorem sed risus ultricies. Velit dignissim sodales ut eu. Nunc sed velit dignissim sodales. Vitae proin sagittis nisl rhoncus mattis rhoncus. Varius morbi enim nunc faucibus a pellentesque. Vestibulum mattis ullamcorper velit sed. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices.
 
-  <div class="form-inputs">
-    <%= f.input :start_date, html5: true %>
-    <%= f.input :ending_date, html5: true %>
+      Sit amet luctus venenatis lectus magna. Ornare arcu dui vivamus arcu felis bibendum ut. Quam id leo in vitae turpis massa sed elementum. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Consequat nisl vel pretium lectus. Eget duis at tellus at urna condimentum mattis pellentesque id. At varius vel pharetra vel turpis nunc eget lorem. Diam ut venenatis tellus in metus vulputate. Vitae turpis massa sed elementum tempus. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Eros donec ac odio tempor. Lorem mollis aliquam ut porttitor. Urna cursus eget nunc scelerisque viverra. Pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Orci dapibus ultrices in iaculis nunc sed. At tellus at urna condimentum mattis pellentesque id. Ac turpis egestas integer eget aliquet nibh praesent tristique magna. Quis enim lobortis scelerisque fermentum.
 
+      Nibh ipsum consequat nisl vel. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis. Consequat nisl vel pretium lectus quam. Enim tortor at auctor urna. Lectus quam id leo in vitae turpis massa. Pellentesque id nibh tortor id aliquet lectus. Leo duis ut diam quam nulla porttitor. Eleifend mi in nulla posuere sollicitudin. Id velit ut tortor pretium. Malesuada fames ac turpis egestas integer eget aliquet. Tincidunt vitae semper quis lectus. At risus viverra adipiscing at in. Feugiat pretium nibh ipsum consequat nisl vel pretium. Accumsan sit amet nulla facilisi morbi tempus.
+
+      Vel facilisis volutpat est velit egestas dui. Viverra suspendisse potenti nullam ac. Risus pretium quam vulputate dignissim suspendisse in. Ultricies tristique nulla aliquet enim tortor. Molestie at elementum eu facilisis sed odio morbi quis. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Viverra nibh cras pulvinar mattis. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Ut porttitor leo a diam sollicitudin tempor id. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Nam at lectus urna duis convallis convallis. Sodales ut etiam sit amet nisl purus in mollis nunc. Mollis aliquam ut porttitor leo a. Aliquet bibendum enim facilisis gravida neque convallis a cras semper. Elit eget gravida cum sociis natoque. Fermentum posuere urna nec tincidunt praesent. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat. Convallis aenean et tortor at risus viverra adipiscing at. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Turpis massa sed elementum tempus egestas sed.
+    </div>
+    <div class = "card-simple">
+      <p><strong><%= @shark.price_per_day %></strong>€ par jour </p>
+      <%= simple_form_for(@booking) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <div class="form-inputs">
+        <%= f.input :start_date, html5: true %>
+        <%= f.input :ending_date, html5: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "button-frozen"%>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "button-frozen"%>
-    <% end %>
-  </div>
-</div>
-
 </div>
