@@ -11,6 +11,12 @@
   </head>
 
   <body>
+  <div class="white">
+    <%= render "layouts/navbar" %>
+    <div class="container">
     <%= yield %>
+    </div>
+  </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
