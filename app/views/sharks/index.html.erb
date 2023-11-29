@@ -1,22 +1,29 @@
+<div class="container">
 <h1>Nos poissons à louer</h1>
 <p>Faites votre choix parmi les propositions ci-dessous:</p>
+<div class="card-wrap cards">
 
-<div class="card-product">
   <% @sharks.each do | shark | %>
+  <div class="card-product">
       <% shark.photos.each do |photo| %>
           <%= cl_image_tag photo.key, width: 130, height: 130, crop: :fill %></li>
-          <%= link_to "Admirer", shark_path(shark), class:"button-frozen" %>
+
       <% end %>
     <div class="card-product-infos">
       <h2><%= shark.name %></h2>
       <p>Description du poisson: <%= shark.description %></p>
-      <p><%= shark.price_per_day %>€ par jour/p>
+      <p><%= shark.price_per_day %>€ par jour/<p>
+      <div class="button-bottom-right">
+        <%= link_to "Admirer", shark_path(shark), class:"button-frozen" %>
+      </div>
     </div>
+  </div>
   <% end %>
-</div>
 
-<div style="width: 100%; height: 400px; p-20"
+</div>
+<div style="width: 100%; height: 400px; p-20" class="photo"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
 

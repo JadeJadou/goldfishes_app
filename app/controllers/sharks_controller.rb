@@ -20,3 +20,5 @@ class SharksController < ApplicationController
     params.require(:shark).permit(:name, :description, :price_per_day, :photos[])
   end
 end
+
+# heroku config:set MAPBOX_API_KEY=pk.eyJ1IjoicHRvbW1pZSIsImEiOiJjbG9wbHMwanUwZHNxMm5xbDR1bjQ0Nzk4In0.c0lO5PyG940TI8dKc2jDng
