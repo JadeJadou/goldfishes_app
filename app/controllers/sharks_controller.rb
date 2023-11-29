@@ -1,6 +1,12 @@
 class SharksController < ApplicationController
   def index
     @sharks = Shark.all
+    @markers = @sharks.geocoded.map do |shark|
+      {
+        lat: shark.latitude,
+        lng: shark.longitude
+      }
+    end
   end
 
   def show
