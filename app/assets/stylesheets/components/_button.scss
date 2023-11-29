@@ -13,7 +13,7 @@
 }
 
 .button-contour {
-  border: solid $frozen;
+  border: 1px solid $frozen;
   font-size: 18px;
   font-weight: bold;
   border-radius: 25px;
@@ -21,7 +21,7 @@
   text-decoration: none;
   color : $frozen;
   &:hover {
-    border:solid  #7fc8f8;
+    border: 1px solid  #7fc8f8;
     color: #7fc8f8
   }
 }
@@ -44,4 +44,3 @@
   align-items: flex-end;
   position: relative;
 }
-
