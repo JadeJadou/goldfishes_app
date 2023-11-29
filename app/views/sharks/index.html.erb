@@ -12,7 +12,7 @@
     <div class="card-product-infos">
       <h2><%= shark.name %></h2>
       <p>Description du poisson: <%= shark.description %></p>
-      <p><%= shark.price_per_day %>€ par jour/<p>
+      <p><%= shark.price_per_day %>€ par jour<p>
       <div class="button-bottom-right">
         <%= link_to "Admirer", shark_path(shark), class:"button-frozen" %>
       </div>
@@ -26,4 +26,3 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
-

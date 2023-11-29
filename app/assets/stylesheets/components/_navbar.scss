@@ -14,14 +14,15 @@
   width: 30px;
 }
 
-// .dropdown-menu {
-//   --bs-dropdown-bg: white;
-//   border: solid lightgray;
-//   border-radius: 25px;
-//   padding-left: 10px;
-//   padding-right: 8px;
-//   display: flex;
-// }
+.dropdown-menu.dropdown-menu-end.show {
+  background-color: white;
+  border: solid lightgray;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+}
+
 
 .btn-nav {
   border: solid lightgray;
