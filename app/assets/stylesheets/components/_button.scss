@@ -36,3 +36,11 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.button-bottom-right{
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
