@@ -8,6 +8,23 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+          <div class="search_box">
+            <div class="search">
+              <div class= "select_area">
+                <i class="fas fa-map-marker-alt map_icon"></i>
+                <div class="text">N'importe où</div>
+              </div>
+
+              <div class="line"></div>
+
+              <div class = "text_and-icon">
+                <input type="text" class="search_text" id="search_text" placeholder="Chercher un poisson">
+                      <i class="fas fa-search search_icon"></i>
+              </div>
+            </div>
+          </div>
+          </li>
+          <li class="nav-item active">
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item">

@@ -3,7 +3,19 @@
   border-bottom: solid lightgray;
   padding-inline-start: 28px;
   padding-inline-end: 28px;
+  padding: 20px;
 
+}
+
+.nav-link {
+  color: #5E6573;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-right: 24px;
+  &:hover {
+    color: $frozen;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -16,7 +28,7 @@
 
 .dropdown-menu.dropdown-menu-end.show {
   background-color: white;
-  border: solid lightgray;
+  border: 1px solid lightgray;
   border-radius: 8px;
   padding-left: 10px;
   padding-right: 8px;
@@ -25,13 +37,87 @@
 
 
 .btn-nav {
-  border: solid lightgray;
+  border: 1px solid lightgray;
   border-radius: 25px;
-  padding-left: 10px;
+  padding-left: 18px;
   padding-right: 8px;
   display: flex;
 
   &:hover {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
+}
+
+// Search bar
+
+.search {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  margin : auto;
+  margin-right: 70px;
+  width : 512px;
+  height: 44px;
+  background-color : white;
+  border-radius: 25px;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+}
+
+.select_area {
+  color : $frozen;
+  display : flex;
+  align-items: center;
+  line-height:20px;
+  font-weight : medium ;
+}
+
+.text {
+  padding-left:15px;
+  font-size: 15px;
+}
+
+.line {
+  margin-left: 15px;
+  border-left: 1px solid #D8D8D8;
+  height: 33px;
+}
+
+.search_text {
+  width: 100%;
+  border: none;
+  margin-left : 15px;
+  font-size : 14px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ADB1B8;
+}
+
+
+.text_and-icon {
+  width: 290px;
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  color : #5E6573;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all .6s ease-in-out; /** Firefox **/
+    -o-transition: all .6s ease-in-out; /** Opera **/
+}
+
+.search_text:focus {
+  outline: none !important;
+}
+
+.search_text:focus + .search_icon{
+  color : $frozen;
+  transform: translate(14px,0);
+    -webkit-transform: translate(14px,0);
+    -o-transform: translate(14px,0);
+    -moz-transform: translate(14px);
 }
