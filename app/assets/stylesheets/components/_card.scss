@@ -17,6 +17,7 @@
 .cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-simple{
@@ -35,14 +36,19 @@
 .card-product {
   overflow: hidden;
   height: 150px;
-  width: 550px;
+  width: 596px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 20px;
   border-radius: 8px;
+  h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 }
+
 
 .card-product img {
   height: 100%;
@@ -57,7 +63,7 @@
   margin-top: 8px;}
 
 .card-product p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;

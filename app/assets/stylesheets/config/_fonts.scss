@@ -1,11 +1,17 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 
 
 // Define fonts for body and headers
 $body-font:'Inter', sans-serif;
-$headers-font: 'Anton', sans-serif;
+$headers-font: 'Inter', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers-font;
+  font-weight: bold !important;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
