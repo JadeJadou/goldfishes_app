@@ -1,3 +1,4 @@
+<div class="container">
 <h1 class="mt-3">Mon profil</h1>
 
 <h2>Poissons loués</h2>
@@ -28,9 +29,6 @@
 
 <h3>Validés</h3>
 
-  <div class>
-    <%= link_to 'ajouter un poisson à louer',new_owner_shark_path, class: "button-frozen", id: "btn-show"%>
-  </div>
 
   <div class="cards">
     <% @validate_bookings.each do |booking| %>
@@ -53,6 +51,10 @@
   </div>
   <p>Oups! Aucune réservation trouvée.</p>
 
+  <div class="border-top"></div>
+
+    <div class="text-end">
+      <%= link_to 'ajouter un poisson à louer',new_owner_shark_path, class: "button-frozen", id: "btn-show"%>
 
   <h3>En attente de validation</h3>
   <p>Ces poissons demandent à être loués, veuillez accepter ou refuser la location.</p>
@@ -68,6 +70,9 @@
       <%= link_to "Accepter", accept_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
       <%= link_to "Décliner", decline_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
       </div>
-    </div>
-  <% end %>
+
+      </div>
+    <% end %>
+  </div>
+
 </div>
