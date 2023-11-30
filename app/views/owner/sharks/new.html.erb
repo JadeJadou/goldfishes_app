@@ -1,2 +1,14 @@
-<h1>Owner::Sharks#new</h1>
-<p>Find me in app/views/owner/sharks/new.html.erb</p>
+<div class="container mt-3">
+<h1>Mettez votre poisson à louer</h1>
+<p>Renseignez les informations de votre poisson avec le formulaire ci-dessous:</p>
+<%= simple_form_for([:owner,@shark]) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price_per_day %>
+  <%= f.input :address %>
+  <%= f.input :weight %>
+  <%= f.input :skills %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
+</div>
