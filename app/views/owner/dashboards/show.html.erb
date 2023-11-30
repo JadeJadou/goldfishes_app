@@ -29,6 +29,10 @@
 
 <h3>Validés</h3>
 
+  <div class>
+    <%= link_to 'ajouter un poisson à louer',new_owner_shark_path, class: "button-frozen", id: "btn-show"%>
+  </div>
+
   <div class="cards">
     <% @validate_bookings.each do |booking| %>
       <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
