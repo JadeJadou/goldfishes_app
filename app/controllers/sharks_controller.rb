@@ -4,7 +4,8 @@ class SharksController < ApplicationController
     @markers = @sharks.geocoded.map do |shark|
       {
         lat: shark.latitude,
-        lng: shark.longitude
+        lng: shark.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {shark: shark})
       }
     end
   end
