@@ -127,7 +127,7 @@ file_2 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701347410
 file_3 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701347409/arcenciel3_easlsr.jpg")
 shark11.photos.attach([
   { io: file, filename: "Arcenciel.jpg", content_type: "image/jpg" },
-  { io: file_3, filename: "Arcenciel2.jpg", content_type: "image/jpg" },
+  { io: file_2, filename: "Arcenciel2.jpg", content_type: "image/jpg" },
   { io: file_3, filename: "Arcenciel3.jpg", content_type: "image/jpg" }
 ])
 
