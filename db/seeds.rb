@@ -18,7 +18,7 @@ shark2 = Shark.create(name: "Dory", description: "Swim right ahead", price_per_d
 shark3 = Shark.create(name: "Polochon", description: "Je m'emmèle les nageoires", price_per_day: 90, owner_id: user.id, address: "St Pierre, Martinique")
 shark4 = Shark.create(name: "Flo", description: "Sinon, il y a ma soeur, Flo Salut, ça va?", price_per_day: 123, owner_id: user.id, address: "187-191 Macquarie Street Sydney NSW 2000")
 
-file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701253886/development/70pfqn47jzmd74csirarx5nufe4p.jpg")
+file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186279/vvk61g10tho4vrzj07z5.jpg")
 shark1.photos.attach(io: file, filename: "Nemo.jpg", content_type: "image/jpg")
 file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186287/xqavpcivs3msufdddbcv.jpg")
 shark2.photos.attach(io: file, filename: "Dory.jpg", content_type: "image/jpg")
