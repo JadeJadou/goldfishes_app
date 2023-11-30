@@ -6,40 +6,38 @@
       <%= cl_image_tag photo.key, class: "photo",height: 300, width: 400, crop: :fill %>
       <% end %>
     <% else %>
-       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
-       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
-       <img class="photo" src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width=300px height=10% alt="">
-
     <% end %>
 <br>
 <br>
   <div class="d-flex">
+
     <div class="p-2 w-100">
       <p><i class="fa-regular fa-address-card" style="color: #7fc8f8;"></i> <strong>Bio:</strong> <%= @shark.description %></p>
       <p><i class="fa-solid fa-wand-magic-sparkles" style="color: #7fc8f8;"></i> <strong>Skills:</strong> <%= @shark.skills %></p>
       <p><i class="fa-solid fa-weight-hanging" style="color: #7fc8f8;"></i> <strong>Poids:</strong> <%= @shark.weight %></p>
       <p><i class="fa-solid fa-location-dot" style="color: #7fc8f8;"></i> <strong>Adresse:</strong> <%= @shark.address %></p>
     </div>
-      <div class="form-container">
-        <div class="large">
-          <div class = "card-simple" >
-            <p><strong><%= @shark.price_per_day %></strong>€ par jour </p>
-            <%= simple_form_for(@booking) do |f| %>
-              <%= f.error_notification %>
-              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-              <div class="form-inputs">
-                <%= f.input :start_date, html5: true %>
-                <%= f.input :ending_date, html5: true %>
-                <%= f.input :shark_id, input_html: {value: params[:id]}, as: :hidden %>
-              </div>
+    <div class="form-container">
+      <div class="large">
+        <div class = "card-simple" >
+          <p><strong><%= @shark.price_per_day %></strong>€ par jour </p>
+          <%= simple_form_for(@booking) do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-              <div class="form-actions">
-                <%= f.button :submit, class: "button-frozen", id: "btn-show"%>
-              </div>
-            <% end %>
-          </div>
+            <div class="form-inputs">
+              <%= f.input :start_date, html5: true %>
+              <%= f.input :ending_date, html5: true %>
+              <%= f.input :shark_id, input_html: {value: params[:id]}, as: :hidden %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, class: "button-frozen", id: "btn-show"%>
+            </div>
+          <% end %>
+        </div>
       </div>
+    </div>
   </div>
-</div>
 </div>
