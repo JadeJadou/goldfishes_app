@@ -16,7 +16,6 @@ puts "Creating user"
 user = User.create!(first_name: "John", email: "john@email.com", password: "123456")
 
 file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186279/vvk61g10tho4vrzj07z5.jpg")
-shark1.photos.attach(io: file, filename: "Nemo.jpg", content_type: "image/jpg")
 
 puts "Creating sharks"
 shark1 = Shark.create!(name: "Nemo", description: "Looking for his father", price_per_day: 100, owner_id: user.id, address: "42 Wallaby Way, Sydney", weight: "300grammes", skills: "Super balèze pour trouver des gens")
