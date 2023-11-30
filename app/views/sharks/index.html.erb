@@ -6,13 +6,11 @@
   <% @sharks.each do | shark | %>
     <%= link_to shark_path(shark), class:"text-decoration-none", style:"color: inherit" do %>
       <div class="card-product">
-          <% shark.photos.each do |photo| %>
-              <%= cl_image_tag photo.key %></li>
-          <% end %>
+        <%= cl_image_tag shark.photos.first.key %>
         <div class="card-product-infos">
           <h2><%= shark.name %></h2>
-          <p style=position:relative;left:10px>Bio: <%= shark.description %></p>
-          <p style=position:relative;left:290px> € <%= shark.price_per_day %>/jour<p>
+          <p>Bio: <%= truncate(shark.description, length:50) %></p>
+          <p style=position:relative;left:330px> € <%= shark.price_per_day %>/jour<p>
           </div>
       </div>
       <% end %>

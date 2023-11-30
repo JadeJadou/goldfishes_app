@@ -3,7 +3,7 @@
 <h2>Poissons loués</h2>
 
 <h3>En cours de validation</h3>
-<% if @user_bookings.present? %>
+<% if @user_bookings.present?%>
   <div class="cards">
     <% @user_bookings.each do |booking| %>
       <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
@@ -32,3 +32,42 @@
   <div class>
     <%= link_to 'ajouter un poisson à louer',new_owner_shark_path, class: "button-frozen", id: "btn-show"%>
   </div>
+
+  <div class="cards">
+    <% @validate_bookings.each do |booking| %>
+      <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
+        <div class="card-product">
+          <% booking.shark.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, width: 130, height: 130, crop: :fill %>
+          <% end %>
+          <div class="card-product-infos">
+            <h4><%= booking.shark.name %></h4>
+            <p><%= booking.shark.description %></p>
+            <%= booking.start_date.strftime("%d %B") %> - <%= booking.ending_date.strftime("%d %B") %>
+            <% number_of_days = booking.ending_date - booking.start_date %>
+            <% total_price = booking.shark.price_per_day * number_of_days %>
+            <p><%= total_price %> €</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <p>Aucune réservation trouvée.</p>
+
+
+  <h3>En attente pour être validé</h3>
+<div class="cards">
+  <% @incoming_bookings.each do |booking| %>
+    <div class="card-simple" style="height:200px">
+      <p><%= booking.shark.name %></p>
+      <p><%= booking.start_date.strftime("%d %B") %> - <%= booking.ending_date.strftime("%d %B") %></p>
+      <% number_of_days = booking.ending_date - booking.start_date %>
+      <% total_price = booking.shark.price_per_day * number_of_days %>
+      <p><%= total_price %> €</p>
+      <div>
+      <%= link_to "Accepter", accept_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
+      <%= link_to "Décliner", decline_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -12,7 +12,8 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: "mapbox://styles/mapbox/streets-v10",
+      projection: 'globe'
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
@@ -22,6 +23,11 @@ export default class extends Controller {
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(this.map)
+    const popup = new mapboxgl.Popup().setHTML(marker.info_window_html) // Add this
+    new mapboxgl.Marker()
+      .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup) // Add this
+      .addTo(this.map)
     })
   }
   #fitMapToMarkers() {
