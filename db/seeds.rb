@@ -15,8 +15,6 @@ User.destroy_all
 puts "Creating user"
 user = User.create!(first_name: "John", email: "john@email.com", password: "123456")
 
-file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186279/vvk61g10tho4vrzj07z5.jpg")
-
 puts "Creating sharks"
 shark1 = Shark.create!(name: "Nemo", description: "Looking for his father", price_per_day: 100, owner_id: user.id, address: "42 Wallaby Way, Sydney", weight: "300grammes", skills: "Super balèze pour trouver des gens")
 shark2 = Shark.create(name: "Dory", description: "Swim right ahead", price_per_day: 80, owner_id: user.id, address: "1-5 Wheat Rd, Sydney NSW 2000, Australie", weight:"500grammes", skills:"Très forte en lâcher-prise, short time memory")
@@ -129,7 +127,7 @@ file_2 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701347410
 file_3 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701347409/arcenciel3_easlsr.jpg")
 shark11.photos.attach([
   { io: file, filename: "Arcenciel.jpg", content_type: "image/jpg" },
-  { io: file_3, filename: "Arcenciel2.jpg", content_type: "image/jpg" },
+  { io: file_2, filename: "Arcenciel2.jpg", content_type: "image/jpg" },
   { io: file_3, filename: "Arcenciel3.jpg", content_type: "image/jpg" }
 ])
 
