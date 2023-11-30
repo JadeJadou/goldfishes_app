@@ -7,7 +7,7 @@
     <%= link_to shark_path(shark), class:"text-decoration-none", style:"color: inherit" do %>
       <div class="card-product">
           <% shark.photos.each do |photo| %>
-              <%= cl_image_tag photo.key %></li>
+              <%= cl_image_tag photo.key %>
           <% end %>
         <div class="card-product-infos">
           <h2><%= shark.name %></h2>
