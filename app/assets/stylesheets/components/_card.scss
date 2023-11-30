@@ -17,6 +17,7 @@
 .cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-simple{
@@ -42,7 +43,12 @@
   align-items: center;
   margin: 20px;
   border-radius: 8px;
+  h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 }
+
 
 .card-product img {
   height: 100%;
@@ -57,7 +63,7 @@
   margin-top: 8px;}
 
 .card-product p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;

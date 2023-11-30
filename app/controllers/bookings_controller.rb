@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def create
     @shark = Shark.find(params[:booking][:shark_id])
     @booking = Booking.new(booking_params)
@@ -14,6 +15,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :shark_id)
+    params.require(:booking).permit(:start_date, :ending_date, :shark_id)
   end
 end
