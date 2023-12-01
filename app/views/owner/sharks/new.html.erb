@@ -1,20 +1,20 @@
 <div class="container mt-3 d-flex">
   <div class="p-2 w-100">
-    <h1>Mettez votre poisson à louer</h1>
-    <p>Renseignez les informations de votre poisson avec le formulaire ci-dessous:</p>
+    <h1>Ajouter un poisson</h1>
+    <p>Renseignez les informations suivantes :</p>
       <%= simple_form_for([:owner,@shark]) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :price_per_day %>
-      <%= f.input :address %>
-      <%= f.input :weight %>
-      <%= f.input :skills %>
+      <%= f.input :name, :label => 'Nom du poisson' %>
+      <%= f.input :description, :as => :string, :label => 'Bio' %>
+      <%= f.input :price_per_day, :label => 'Prix par jour' %>
+      <%= f.input :address,:label => 'Adresse' %>
+      <%= f.input :weight, :label => 'Poids' %>
+      <%= f.input :skills, :label => 'Technique spéciale' %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit %>
+      <%= f.submit 'Ajouter mon poisson', class:"button-frozen" %>
     <% end %>
   </div>
   <div class="p-2 flex-shrink-1">
-    <%= link_to 'Retour', owner_dashboards_path, class: "button-frozen", id: "btn-show"%>
+    <%= link_to 'Retour', owner_dashboards_path, class: "button-frozen"%>
   </div>
 
 </div>
