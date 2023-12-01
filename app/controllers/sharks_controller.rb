@@ -13,6 +13,12 @@ class SharksController < ApplicationController
   def show
     @shark = Shark.find(params[:id])
     @booking = Booking.new
+    @marker = [{
+      lat: @shark.latitude,
+      lng: @shark.longitude,
+      info_window_html: render_to_string(partial: "info_window", locals: {shark: @shark})
+    }]
+
   end
 
   private
