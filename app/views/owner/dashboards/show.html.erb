@@ -29,27 +29,27 @@
 
 <h3>Validés</h3>
 
-
   <div class="cards">
-    <% @validate_bookings.each do |booking| %>
-      <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
-        <div class="card-product">
-          <% booking.shark.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, width: 130, height: 130, crop: :fill %>
-          <% end %>
-          <div class="card-product-infos">
-            <h4><%= booking.shark.name %></h4>
-            <p><%= booking.shark.description %></p>
-            <%= booking.start_date.strftime("%d %B") %> - <%= booking.ending_date.strftime("%d %B") %>
-            <% number_of_days = booking.ending_date - booking.start_date %>
-            <% total_price = booking.shark.price_per_day * number_of_days %>
-            <p><%= total_price %> €</p>
+    <% if @validate_bookings.present?%>
+      <% @validate_bookings.each do |booking| %>
+        <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
+          <div class="card-product">
+            <%= cl_image_tag booking.shark.photos.first.key %>
+            <div class="card-product-infos">
+              <h4><%= booking.shark.name %></h4>
+              <p><%= booking.shark.description %></p>
+              <%= booking.start_date.strftime("%d %B") %> - <%= booking.ending_date.strftime("%d %B") %>
+              <% number_of_days = booking.ending_date - booking.start_date %>
+              <% total_price = booking.shark.price_per_day * number_of_days %>
+              <p><%= total_price %> €</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
+    <% else %>
+      <p>Oups! Aucune réservation trouvée.</p>
     <% end %>
   </div>
-  <p>Oups! Aucune réservation trouvée.</p>
 
   <div class="border-top"></div>
 
