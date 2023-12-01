@@ -51,7 +51,7 @@
 // Search bar
 
 .search {
-  padding-left: 25px;
+  padding-left: 32px;
   display: flex;
   margin-top:auto;
   margin-left:auto;
@@ -117,8 +117,8 @@
 
 .search_text:focus + .search_icon{
   color : $frozen;
-  transform: translate(14px,0);
-    -webkit-transform: translate(14px,0);
-    -o-transform: translate(14px,0);
-    -moz-transform: translate(14px);
+  transform: translate(30px,0);
+    -webkit-transform: translate(30px,0);
+    -o-transform: translate(30px,0);
+    -moz-transform: translate(30px);
 }
