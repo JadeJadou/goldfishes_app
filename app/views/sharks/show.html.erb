@@ -18,6 +18,15 @@
       <p><i class="fa-solid fa-wand-magic-sparkles" style="color: #7fc8f8;"></i> <%= @shark.skills %></p>
       <p><i class="fa-solid fa-weight-hanging" style="color: #7fc8f8;"></i> <%= @shark.weight %></p>
       <p><i class="fa-solid fa-location-dot" style="color: #7fc8f8;"></i> <%= @shark.address %></p>
+      <div class="border-top"></div>
+      <div style="display: flex; align-items: center;">
+        <%= image_tag "https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg", style: "width: 60px; height: 60px; margin-right: 10px; border-radius: 50%; margin-bottom:50px" %>
+        <div>
+          <p><strong>Propriétaire : <%= @shark.owner.first_name %></strong></p>
+          <p style="color: #717171;">Super pêcheur depuis 12 ans</p>
+        </div>
+      </div>
+
     </div>
 
     <div class="map-show"
@@ -44,7 +53,7 @@
                 </div>
 
               <div class="form-actions">
-                <%= f.button :submit, class: "button-frozen", id: "btn-show"%>
+                <%= f.button :submit, class: "button-frozen"%>
               </div>
             <% end %>
           </div>

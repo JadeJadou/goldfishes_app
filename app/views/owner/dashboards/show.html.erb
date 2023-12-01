@@ -27,8 +27,8 @@
 
     <div class="col-md-8">
       <h3>En cours de validation</h3>
-        <p> Le propriétaire validera bientôt votre réservation</p>
         <% if @user_bookings.present?%>
+        <p> Le propriétaire validera bientôt votre réservation</p>
           <div class="cards">
             <% @user_bookings.each do |booking| %>
               <%= link_to shark_path(booking.shark), class: "text-decoration-none", style: "color: inherit" do %>
