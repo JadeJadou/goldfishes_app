@@ -7,32 +7,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-        <div class="flex" >
-          <li class="nav-item active">
-          <div class="search_box">
-            <div class="search">
-              <div class= "select_area">
-                <i class="fas fa-map-marker-alt map_icon"></i>
-                <div class="text"> Partout </div>
-              </div>
-
-              <div class="line"></div>
-
-              <div class = "text_and-icon">
-                <input type="text" class="search_text" id="search_text" placeholder="Chercher un poisson">
-                      <i class="fas fa-search search_icon"></i>
-              </div>
-            </div>
-            </div>
-
-          </div>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Home", "/", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Fishes", sharks_path, class: "nav-link" %>
-          </li>
+              <li class="nav-item active">
+                  <div class="row justify-content-left">
+                      <div class="col-sm-8 my-3">
+                        <%= form_with url: sharks_path, method: :get, class: "d-flex" do %>
+                          <%= text_field_tag :query,
+                                params[:query],
+                                class: "form-control",
+                                placeholder: "Chercher un poisson"%>
+                          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+                          </div>
+                    </div>
+                        <% end %>
+              <li class="nav-item active">
+                <%= link_to "Home", "/", class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Fishes", sharks_path, class: "nav-link" %>
+              </li>
+                  </li>
           <div class="btn-nav">
             <li class="nav-item dropdown">
             <i class="fa-solid fa-bars" style="color: #6b6b6b;"></i>
@@ -49,7 +42,7 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+        </div>
+        </div>
       </ul>
     </div>
-  </div>
-</div>
