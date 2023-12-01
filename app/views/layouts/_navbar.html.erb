@@ -1,34 +1,34 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid ">
     <%= link_to "/", class: "navbar-brand" do %>
-     <i class="fa-solid fa-fish-fins"></i>
+      <i class="fa-solid fa-fish-fins"></i>
     <% end %>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-              <li class="nav-item active">
-                  <div class="row justify-content-left">
-                      <div class="col-sm-8 my-3">
-                        <%= form_with url: sharks_path, method: :get, class: "d-flex" do %>
-                          <%= text_field_tag :query,
-                                params[:query],
-                                class: "form-control",
-                                placeholder: "Chercher un poisson"%>
-                          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-                          </div>
-                    </div>
-                        <% end %>
-              <li class="nav-item active">
-                <%= link_to "Home", "/", class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Fishes", sharks_path, class: "nav-link" %>
-              </li>
-                  </li>
+          <li class="nav-item active">
+              <div class="row justify-content-left">
+                  <div class="col-sm-8 my-3">
+                    <%= form_with url: sharks_path, method: :get, class: "d-flex" do %>
+                      <%= text_field_tag :query,
+                            params[:query],
+                            class: "form-control searchbar",
+                            placeholder: "Chercher un poisson"%>
+                      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+                    <% end %>
+                  </div>
+                </div>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Home", "/", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Fishes", sharks_path, class: "nav-link" %>
+          </li>
           <div class="btn-nav">
             <li class="nav-item dropdown">
-            <i class="fa-solid fa-bars" style="color: #6b6b6b;"></i>
+              <i class="fa-solid fa-bars" style="color: #6b6b6b;"></i>
               <%= image_tag "https://static.vecteezy.com/system/resources/previews/018/765/757/original/user-profile-icon-in-flat-style-member-avatar-illustration-on-isolated-background-human-permission-sign-business-concept-vector.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Gérer mes réservations", owner_dashboards_path, class: "dropdown-item" %>
@@ -42,7 +42,7 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
-        </div>
-        </div>
       </ul>
     </div>
+  </div>
+</div>
