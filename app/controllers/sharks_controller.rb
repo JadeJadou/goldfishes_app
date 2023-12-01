@@ -7,6 +7,9 @@ class SharksController < ApplicationController
         lng: shark.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: {shark: shark})
       }
+      if params[:query].present?
+        @sharks = @sharks.where("name ILIKE ?", "%#{params[:query]}%")
+      end
     end
   end
 
