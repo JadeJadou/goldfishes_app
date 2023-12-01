@@ -13,24 +13,25 @@ Shark.destroy_all
 User.destroy_all
 
 puts "Creating user"
-user = User.create!(first_name: "John", email: "john@email.com", password: "123456")
+user1 = User.create!(first_name: "John", email: "john@email.com", password: "123456")
+user2 = User.create!(first_name: "Olivier", email: "olivier@email.com", password: "azerty")
 
 puts "Creating sharks"
-shark1 = Shark.create!(name: "Nemo", description: "Looking for his father", price_per_day: 100, owner_id: user.id, address: "42 Wallaby Way, Sydney", weight: "300grammes", skills: "Super balèze pour trouver des gens")
-shark2 = Shark.create(name: "Dory", description: "Swim right ahead", price_per_day: 80, owner_id: user.id, address: "1-5 Wheat Rd, Sydney NSW 2000, Australie", weight:"500grammes", skills:"Très forte en lâcher-prise, short time memory")
-shark3 = Shark.create(name: "Polochon", description: "Je m'emmèle les nageoires", price_per_day: 90, owner_id: user.id, address: "St Pierre, Martinique", weight:"1kg", skills:"Bonne humeur et gentillesse")
-shark4 = Shark.create(name: "Flo", description: "Sinon, il y a ma soeur, Flo Salut, ça va?", price_per_day: 123, owner_id: user.id, address: "187-191 Macquarie Street Sydney NSW 2000", weight:"1,5kg", skills:"Super nageuse, empathique")
-shark5 = Shark.create(name: "Oscar", description: "Jeune poisson bavard et affabulateur, employé au LavO'Baleine", price_per_day: 70, owner_id: user.id, address: "Borabora", weight:"800grammes", skills:"Menteur, charmeur, rigolo")
-shark6 = Shark.create(name: "Lola", description: "Poisson ange, meilleure amie d'Oscar", price_per_day: 45, owner_id: user.id, address: "Borabora", weight:"300grammes", skills:"Gentille, fidèle en amitié")
-shark7 = Shark.create(name: "Lenny", description: "requin végétarien", price_per_day: 150, owner_id: user.id, address: "Tahiti", weight:"1 tonne", skills:"Gentil, sympathique, sait faire peur si besoin")
-shark8 = Shark.create(name: "Sykes", description: "Poisson globe patron du LavO'Baleine", price_per_day: 30, owner_id: user.id, address: "Borabora", weight:"300grammes", skills:"Peut doubler de volume en moins de 30 secondes")
-shark9 = Shark.create(name: "Angie", description: "poisson lion", price_per_day: 60, owner_id: user.id, address: "Jamaïque", weight:"600grammes", skills:"Arnaqueuse, charmante")
-shark10 = Shark.create(name: "Don Edward Lino", description: "Chef de la pègre, patron d'une foule de requins, d'épaulards, d'espadon et de poulpes", price_per_day: 250, owner_id: user.id, address: "Bahamas", weight:"1,5tonne", skills:"Chef, peut décapiter un poisson d'un seul regard")
-shark11 = Shark.create(name: "Arc en Ciel", description: "Tout simplement le plus beau poisson de l'océan", price_per_day: 100, owner_id: user.id, address: "Saint Malo", weight:"800grammes", skills:"Apprends vite, partageur")
-shark12 = Shark.create(name: "Loche zebrée", description: "Petit poisson régulant les populations d'escargots d'eau douce", price_per_day: 20, owner_id: user.id, address: "India", weight:"100grammes", skills:"Se faufile partout, aime les escargots")
-shark13 = Shark.create(name: "Moby Dick", description: "Grande baleine blanche, némésis du capitain Achab", price_per_day: 3000, owner_id: user.id, address: "Nantucket", weight:"8 tonnes", skills:"Solide, peut tracter un bateau")
-shark14 = Shark.create(name: "Sergent major à queue en ciseaux", description: "Petit poisson omnivore à tendance carnivore", price_per_day: 25, owner_id: user.id, address: "Indian Ocean", weight:"400grammes", skills:"Sociable, vif, agressif si besoin")
-shark15 = Shark.create(name: "Paul le Poulpe", description: "Poulpe qui prédit l'avenir, citoyen d'honneur de O Carballiño", price_per_day: 2000, owner_id: user.id, address: "Oberhausen", weight:"1,5kg", skills:"Oracle, visionnaire, fan de foot")
+shark1 = Shark.create!(name: "Nemo", description: "Looking for his father", price_per_day: 100, owner_id: user1.id, address: "42 Wallaby Way, Sydney", weight: "300grammes", skills: "Super balèze pour trouver des gens")
+shark2 = Shark.create(name: "Dory", description: "Swim right ahead", price_per_day: 80, owner_id: user2.id, address: "1-5 Wheat Rd, Sydney NSW 2000, Australie", weight:"500grammes", skills:"Très forte en lâcher-prise, short time memory")
+shark3 = Shark.create(name: "Polochon", description: "Je m'emmèle les nageoires", price_per_day: 90, owner_id: user1.id, address: "St Pierre, Martinique", weight:"1kg", skills:"Bonne humeur et gentillesse")
+shark4 = Shark.create(name: "Flo", description: "Sinon, il y a ma soeur, Flo Salut, ça va?", price_per_day: 123, owner_id: user2.id, address: "187-191 Macquarie Street Sydney NSW 2000", weight:"1,5kg", skills:"Super nageuse, empathique")
+shark5 = Shark.create(name: "Oscar", description: "Jeune poisson bavard et affabulateur, employé au LavO'Baleine", price_per_day: 70, owner_id: user1.id, address: "Borabora", weight:"800grammes", skills:"Menteur, charmeur, rigolo")
+shark6 = Shark.create(name: "Lola", description: "Poisson ange, meilleure amie d'Oscar", price_per_day: 45, owner_id: user2.id, address: "Borabora", weight:"300grammes", skills:"Gentille, fidèle en amitié")
+shark7 = Shark.create(name: "Lenny", description: "Requin végétarien", price_per_day: 150, owner_id: user2.id, address: "Tahiti", weight:"1 tonne", skills:"Gentil, sympathique, sait faire peur si besoin")
+shark8 = Shark.create(name: "Sykes", description: "Poisson globe patron du LavO'Baleine", price_per_day: 30, owner_id: user1.id, address: "Borabora", weight:"300grammes", skills:"Peut doubler de volume en moins de 30 secondes")
+shark9 = Shark.create(name: "Angie", description: "Poisson lion, super classe", price_per_day: 60, owner_id: user2.id, address: "Jamaïque", weight:"600grammes", skills:"Arnaqueuse, charmante")
+shark10 = Shark.create(name: "Don Edward Lino", description: "Chef de la pègre, patron d'une foule de requins, d'épaulards, d'espadon et de poulpes", price_per_day: 250, owner_id: user2.id, address: "Bahamas", weight:"1,5tonne", skills:"Chef, peut décapiter un poisson d'un seul regard")
+shark11 = Shark.create(name: "Arc en Ciel", description: "Tout simplement le plus beau poisson de l'océan", price_per_day: 100, owner_id: user1.id, address: "Saint Malo", weight:"800grammes", skills:"Apprends vite, partageur")
+shark12 = Shark.create(name: "Loche zebrée", description: "Petit poisson régulant les populations d'escargots d'eau douce", price_per_day: 20, owner_id: user1.id, address: "India", weight:"100grammes", skills:"Se faufile partout, aime les escargots")
+shark13 = Shark.create(name: "Moby Dick", description: "Grande baleine blanche, némésis du capitain Achab", price_per_day: 3000, owner_id: user2.id, address: "Nantucket", weight:"8 tonnes", skills:"Solide, peut tracter un bateau")
+shark14 = Shark.create(name: "Sergent major à queue en ciseaux", description: "Petit poisson omnivore à tendance carnivore", price_per_day: 25, owner_id: user2.id, address: "Indian Ocean", weight:"400grammes", skills:"Sociable, vif, agressif si besoin")
+shark15 = Shark.create(name: "Paul le Poulpe, méga star", description: "Poulpe qui prédit l'avenir, citoyen d'honneur de O Carballiño", price_per_day: 2000, owner_id: user2.id, address: "Oberhausen", weight:"1,5kg", skills:"Oracle, visionnaire, fan de foot")
 
 file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186279/vvk61g10tho4vrzj07z5.jpg")
 file_2 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701250814/l3vz0er3cvm2ydg6pxrn.jpg")
@@ -43,7 +44,7 @@ shark1.photos.attach([
 
 file = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701186287/xqavpcivs3msufdddbcv.jpg")
 file_2 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701250865/beet65fiuk8vzg09iblm.jpg")
-file_3 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701342828/Dory3_jzfuyy.jpg")
+file_3 = URI.open("https://res.cloudinary.com/dqxolg01p/image/upload/v1701424701/Dory3_v2r4tp.jpg")
 shark2.photos.attach([
   { io: file, filename: "Dory.jpg", content_type: "image/jpg" },
   { io: file_2, filename: "Dory2.jpg", content_type: "image/jpg" },

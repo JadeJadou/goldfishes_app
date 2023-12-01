@@ -95,6 +95,31 @@
               </div>
           </div>
         <% end %>
+      <% end %>
+    <% else %>
+      <p>Oups! Aucune réservation trouvée.</p>
+    <% end %>
+  </div>
+
+  <div class="border-top"></div>
+
+    <div class="text-end">
+      <%= link_to 'Ajouter un poisson à louer',new_owner_shark_path, class: "button-frozen", id: "btn-show"%>
+    </div>
+    <h3>En attente de validation</h3>
+    <p>Ces poissons demandent à être loués, veuillez accepter ou refuser la location.</p>
+    <div class="cards">
+    <% @incoming_bookings.each do |booking| %>
+      <div class="card-simple" style="height:200px">
+          <p><%= booking.shark.name %></p>
+          <p><%= booking.start_date.strftime("%d %B") %> - <%= booking.ending_date.strftime("%d %B") %></p>
+          <% number_of_days = booking.ending_date - booking.start_date %>
+          <% total_price = booking.shark.price_per_day * number_of_days %>
+          <p><%= total_price %> €</p>
+        <div>
+          <%= link_to "Accepter", accept_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
+          <%= link_to "Décliner", decline_owner_booking_path(booking), data: {turbo_method: :patch}, class: "btn btn-light"%>
+        </div>
       </div>
     </div>
   </div>
