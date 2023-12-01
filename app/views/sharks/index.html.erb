@@ -10,7 +10,7 @@
         <div class="card-product-infos">
           <h2><%= shark.name %></h2>
           <p>Bio: <%= truncate(shark.description, length:50) %></p>
-          <p style="position:relative;left:330px"> € <%= shark.price_per_day %>/jour<p>
+          <p id="price-per-day" style="position:relative;left:330px;"> € <%= shark.price_per_day %>/jour <p>
           </div>
       </div>
       <% end %>
